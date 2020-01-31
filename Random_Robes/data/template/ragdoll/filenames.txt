@@ -1,0 +1,8 @@
+mods/Random_Robes/files/template/ragdoll/torso.png
+mods/Random_Robes/files/template/ragdoll/right_thigh.png
+mods/Random_Robes/files/template/ragdoll/right_arm.png
+mods/Random_Robes/files/template/ragdoll/right_hand.png
+mods/Random_Robes/files/template/ragdoll/left_thigh.png
+mods/Random_Robes/files/template/ragdoll/left_arm.png
+mods/Random_Robes/files/template/ragdoll/left_hand.png
+mods/Random_Robes/files/template/ragdoll/head.png
