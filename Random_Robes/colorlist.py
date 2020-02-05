@@ -21,6 +21,15 @@ skincolors = (
     (87, 66, 9, 255),  # -- coco boi
 )
 
+beltcolors = (
+    (82, 61, 11),
+    (48, 36, 7),
+    (0, 0, 0),
+    (209, 155, 61),
+    (161, 161, 161)
+
+)
+
 #template_colors
 template_main = (240, 240, 240, 255)
 template_edge = (200, 200, 200, 255)
@@ -74,7 +83,7 @@ def generateColorPalate():
     edge_c = (r-lighter,g-lighter,b-lighter,a)
     hand_c = skincolors[random.randrange(0, len(skincolors))]
     face_c = (35 , 35 , 35 , 255)
-    belt_c = (209, 155, 61)# make a list of colors
+    belt_c = beltcolors[random.randrange(0, len(beltcolors))]# make a list of colors
     arm_c = edge_c
 
     pallete = []

@@ -1,4 +1,4 @@
-dofile( "mods/starting_loadouts/files/loadouts.lua" )
+dofile( "mods/Random_Robes/files/loadouts.lua" )
 dofile( "data/scripts/perks/perk.lua" )
 
 function OnPlayerSpawned( player_entity ) -- this runs when player entity has been created
@@ -40,12 +40,12 @@ function OnPlayerSpawned( player_entity ) -- this runs when player entity has be
 	
 	-- set player sprite (since we change only one value, ComponentSetValue is fine)
 	local player_sprite_component = EntityGetFirstComponent( player_entity, "SpriteComponent" )
-	local player_sprite_file = "mods/starting_loadouts/files/" .. loadout_choice.folder .. "/player.xml"
+	local player_sprite_file = "mods/Random_Robes/files/" .. loadout_choice.folder .. "/player.xml"
 	ComponentSetValue( player_sprite_component, "image_file", player_sprite_file )
 	
 	-- set player arm sprite
 	local player_arm_sprite_component = EntityGetFirstComponent( player_arm, "SpriteComponent" )
-	local player_arm_sprite_file = "mods/starting_loadouts/files/" .. loadout_choice.folder .. "/player_arm.xml"
+	local player_arm_sprite_file = "mods/Random_Robes/files/" .. loadout_choice.folder .. "/player_arm.xml"
 	ComponentSetValue( player_arm_sprite_component, "image_file", player_arm_sprite_file )
 	
 	-- set player cape colour (since we're changing multiple variables, we'll use the edit_component() utility)
@@ -56,7 +56,7 @@ function OnPlayerSpawned( player_entity ) -- this runs when player entity has be
 	
 	-- set player ragdoll
 	local player_ragdoll_component = EntityGetFirstComponent( player_entity, "DamageModelComponent" )
-	local player_ragdoll_file = "mods/starting_loadouts/files/" .. loadout_choice.folder .. "/ragdoll/filenames.txt"
+	local player_ragdoll_file = "mods/Random_Robes/files/" .. loadout_choice.folder .. "/ragdoll/filenames.txt"
 	ComponentSetValue( player_ragdoll_component, "ragdoll_filenames_file", player_ragdoll_file )
 
 
@@ -67,8 +67,33 @@ end
 -- ModDevGenerateSpriteUVsForDirectory() must be called in init.lua file scope. It doesn't do anything outside noita_dev.exe.
 ------------------------
 ------------------------
-ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng28221" )
-ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng32124" )
-ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng49481" )
-ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng61982" )
-ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng74956" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng11600" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng12816" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng15510" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng22585" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng32368" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng34135" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng38841" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng41246" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng46481" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng51173" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng53165" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng54205" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng57778" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng65633" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng67277" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng68273" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng69639" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng7455" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng76984" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng77946" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng7910" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng81232" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng83466" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng84223" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng84769" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng85725" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng8687" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng8945" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng97502" )
+ModDevGenerateSpriteUVsForDirectory( "mods/Random_Robes/files/rng9939" )

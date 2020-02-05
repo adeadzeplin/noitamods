@@ -27,9 +27,6 @@ def edit_lua_files():
     list_of_colors = colors_in.readlines()
     colors_in.close()
 
-    # temp = list_of_colors[0].strip('\n'),list_of_colors[1].strip('\n'))
-    # temp = temp.strip('\n')
-
     # print(list_of_colors)
     line_counter = 0
     lua_list = []

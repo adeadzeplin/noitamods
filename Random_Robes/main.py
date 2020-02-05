@@ -1,6 +1,6 @@
 from PIL import Image
 from include import *
-
+from discriminator import the_racist
 
 def CreateNewSkin():
 
@@ -37,7 +37,7 @@ def CreateNewSkin():
 
         # opens the new file
         if sprite_path == sprite_path_list[0]:
-            #png.show()
+            # png.show()
             pass
         png.save(new_color_path + '/' + sprite_path)
 
@@ -47,13 +47,15 @@ def CreateNewSkin():
 
 
 if __name__ == "__main__":
-    # CreateNewSkin()
+    for x in range(0,30):
+        CreateNewSkin()
 
-    # update tracker file
+    ##update tracker file
     updateTrackerfile()
 
-    # edit lua files to have the right info regarding the generated files
+    ##edit lua files to have the right info regarding the generated files
     edit_lua_files()
+    
 
 
 

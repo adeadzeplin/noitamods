@@ -53,7 +53,7 @@ def edit_xml_filepaths(new_color_path, new_palette_path):
 
         # modify it
         edit_path = edit_path.replace('template', new_palette_path)
-        print(edit_path)
+        # print(edit_path)
 
         # put it back
         lines_of_file.insert(1, edit_path)
