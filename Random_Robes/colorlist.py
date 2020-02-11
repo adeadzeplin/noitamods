@@ -38,7 +38,7 @@ template_face = (35 , 35 , 35 , 255)
 template_belt = (175, 175, 175, 255)
 template_arm =  (90 , 90 , 90 , 255)
 
-mod_top_path = '/Program Files (x86)/Steam/steamapps/common/Noita/mods/Random_robes/'
+mod_top_path = '/Program Files (x86)/Steam/steamapps/common/Noita/mods/Random_Robesv2/'
 mod_path = mod_top_path + 'files/'
 template_path = mod_path + 'template/'
 colortracker_path = mod_path + 'colortracker.txt'

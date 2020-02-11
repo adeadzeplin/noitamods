@@ -66,7 +66,7 @@ def edit_lua_files():
         prime_in.pop()
 
     for j, a_color in enumerate(list_of_colors):
-        temp_path = 'ModDevGenerateSpriteUVsForDirectory( "' + 'mods/Random_Robes/files/' + a_color.strip('\n') + '" )\n'
+        temp_path = 'ModDevGenerateSpriteUVsForDirectory( "' + 'mods/Random_Robesv2/files/' + a_color.strip('\n') + '" )\n'
         prime_in.append(temp_path)
 
     lua_output = open(mod_top_path + 'init.lua', "w")

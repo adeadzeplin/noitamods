@@ -55,7 +55,7 @@ if __name__ == "__main__":
 
     ##edit lua files to have the right info regarding the generated files
     edit_lua_files()
-    
+
 
 
 
