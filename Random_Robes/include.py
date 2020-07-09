@@ -1,11 +1,39 @@
 
-
+from PIL import Image
+import os
 from colorlist import *
 from fileedit import save_new_rgb_vals,edit_xml_filepaths,edit_txt_filepaths,updateTrackerfile
 
-def update_color_values():
+import shutil
+
+
+def updateUVspritemaps():
+    templateUVgenerated_path = generated_path + "mods.Random_Robesv2.files.template.player.png"
+
+    try:
+        shutil.rmtree(UVspritemap_path)
+    except:
+        print("delete directory FAILED")
+        pass
+    template_uvsprite_png = Image.open(generated_path + "mods.Random_Robesv2.files.template.player.png")
+
+    ofile = open(colortracker_path, "r")
+    filelist = ofile.readlines()
+    ofile.close()
+
+    try:
+        os.mkdir(UVspritemap_path)
+    except:
+        print("the new directory couldn't be made")
+
+    for file in filelist:
+        shutil.copy(templateUVgenerated_path, UVspritemap_path + 'mods.Random_Robesv2.files.'+ file.strip('\n') +'.player.png')
+
+
+
+def update_color_values(RGBVAL):
     # Generate palate & new path
-    new_palette_path, new_pallet = generateColorPalate()
+    new_palette_path, new_pallet = generateColorPalate(RGBVAL)
     new_color_path = mod_path + new_palette_path + "/"
 
     # Populate the new directory

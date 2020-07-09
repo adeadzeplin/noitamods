@@ -1,6 +1,8 @@
 
 from colorlist import *
 import os
+
+
 def save_new_rgb_vals(new_color_path,new_pallet,new_palette_path):
     # save the generated values for later
     rgbSave = open(new_color_path + "rgbvalues.txt", "w")

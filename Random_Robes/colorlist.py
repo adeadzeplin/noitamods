@@ -19,15 +19,16 @@ skincolors = (
     (217, 170, 41, 255),  # -- tan boi
     (168, 130, 25, 255),  # -- deep tan boi
     (87, 66, 9, 255),  # -- coco boi
+
 )
 
 beltcolors = (
-    (82, 61, 11),
-    (48, 36, 7),
-    (0, 0, 0),
-    (209, 155, 61),
-    (161, 161, 161)
-
+    (220, 220, 220),# Light grey
+    (82, 61, 11),   # brown belt
+    (48, 36, 7),    # Dark Brown belt
+    (0, 0, 0),      # Black Belt
+    (209, 155, 61), # Beige Belt
+    (161, 161, 161) # Grey belt
 )
 
 #template_colors
@@ -38,10 +39,14 @@ template_face = (35 , 35 , 35 , 255)
 template_belt = (175, 175, 175, 255)
 template_arm =  (90 , 90 , 90 , 255)
 
+# CHANGE THIS TO WHEREEVER YOUR MOD FOLDER IS LOCATED##################################
 mod_top_path = '/Program Files (x86)/Steam/steamapps/common/Noita/mods/Random_Robesv2/'
+#######################################################################################
 mod_path = mod_top_path + 'files/'
 template_path = mod_path + 'template/'
 colortracker_path = mod_path + 'colortracker.txt'
+generated_path = mod_top_path + "data/generated/"
+UVspritemap_path = generated_path + 'sprite_uv_maps/'
 
 template_palette = []
 template_palette.append(template_main)
@@ -64,8 +69,7 @@ sprite_path_list.append('ragdoll/right_hand.png')
 sprite_path_list.append('ragdoll/right_thigh.png')
 sprite_path_list.append('ragdoll/torso.png')
 
-def generateColorPalate():
-
+def gencol():
     red_w = random.random()
     blu_w = random.random()
     gre_w = random.random()
@@ -77,10 +81,25 @@ def generateColorPalate():
     r = int(red_w * random.randrange(0,color_max) + color_min)
     b = int(blu_w * random.randrange(0,color_max) + color_min)
     g = int(gre_w * random.randrange(0,color_max) + color_min)
+
+    return [r,g,b]
+def generateColorPalate(RGBval):
+
+
+    r = RGBval[0]
+    g = RGBval[1]
+    b = RGBval[2]
+    lighter = 25
+
     a = 255
 
+
+
+
     main_c = (r,g,b,a)
+
     edge_c = (r-lighter,g-lighter,b-lighter,a)
+
     hand_c = skincolors[random.randrange(0, len(skincolors))]
     face_c = (35 , 35 , 35 , 255)
     belt_c = beltcolors[random.randrange(0, len(beltcolors))]# make a list of colors
@@ -95,6 +114,6 @@ def generateColorPalate():
     pallete.append(arm_c)
 
 
-    doodoopath = 'rng'+ str(random.randint(1,100000))
-
+    # doodoopath = 'rng'+ str(random.randint(1,100000))
+    doodoopath = 'RGB'+ str(r) + '_' + str(g) + '_' + str(b)
     return doodoopath, pallete
