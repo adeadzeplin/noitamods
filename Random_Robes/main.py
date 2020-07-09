@@ -1,6 +1,5 @@
 from PIL import Image
 from include import *
-from discriminator import the_racist
 
 def CreateNewSkin():
 
