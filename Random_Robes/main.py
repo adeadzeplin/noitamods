@@ -47,7 +47,11 @@ def CreateNewSkin():
 
 
 if __name__ == "__main__":
-    for x in range(0,30):
+    
+    ##num of color pallets to generate
+    generate_num = 30
+    
+    for x in range(0,generate_num):
         CreateNewSkin()
 
     ##update tracker file
