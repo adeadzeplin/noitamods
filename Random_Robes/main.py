@@ -137,8 +137,20 @@ def makeSkins(num):
 
 
 if __name__ == "__main__":
-    # makeSkins(100) # this Function will attempt to create
-    updateFiles()    # this function will update the game files with the appropriate code
+    
+    
+    
+    
+    # this Function will attempt to create 100 randomly colored sprites
+    # however the way it generates color paletes is pretty bad and takes forever if you want to do a bunch of colors
+    # generating the 995 skins for the mod took 30 minutes! super slow and innacurate
+    # and I had it attempt to make 10,000 skins and it only made 955
+    # this is because if two randomly generated color pallets are too similar to each other the program will just toss out the color and try a different random color
+ 
+    # makeSkins(100)
+    
+    updateFiles()    # this function will update the game files with the appropriate code based on whatever files are in the mod folder
+                     # this is usefull if you want to delete some spritesets that you think look bad and want to delete them
 
 
 
