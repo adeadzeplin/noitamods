@@ -1,5 +1,6 @@
-# noita sprite painter
-Objective: Randomize Character sprite each run so it adds veriety to each run. 
+This project was born from a desire to want randomized characters for the game Noita.
+
+This project is a supplementary tool i used to help create a mod.
 
 this repository contains a python app that you can setup and run to create your own colored files. beware it is inefficient.
 
